@@ -18,9 +18,14 @@ test $# -ne 2 && exit
 # if test $segundaPalavra = *"$PrimeiraPalavra"* NAO FUNCIONA
 # Espero nao esquecer isso e assim poder perder mais horas com outros erros na vida :)
 
-if [[ $segundaPalavra = *"$primeiraPalavra"* ]]
-then
-	echo "$primeiraPalavra esta contida em $segundaPalavra"
-fi
+#if [[ $segundaPalavra = *"$primeiraPalavra"* ]]
+# then
+	#echo "$primeiraPalavra esta contida em $segundaPalavra"
+# fi
 
 
+#Versao do livro:
+	#Manda a segunda palavra (palavra inteira) pro grep
+	#grep procura silenciosamente(-qs) a primeira palavra dentro da segunda
+       	#caso ele encontre, vai dar o echo nas duas	
+	echo $segundaPalavra | grep -qs $primeiraPalavra && echo "$segundaPalavra contem $primeiraPalavra"
